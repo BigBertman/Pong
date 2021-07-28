@@ -25,12 +25,12 @@ public class BallMovement : MonoBehaviour
 
         if (rand < 1.0f)
         {
-            body2D.AddForce(new Vector2(10.0f, -5.0f));
+            body2D.AddForce(new Vector2(20.0f, -15.0f));
 
         }
         else
         {
-            body2D.AddForce(new Vector2(-10.0f, -5.0f));
+            body2D.AddForce(new Vector2(-20.0f, -15.0f));
         }
     }
 
@@ -44,5 +44,16 @@ public class BallMovement : MonoBehaviour
     {
         ResetBall();
         Invoke("RandomStart", 2.0f);
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.collider.CompareTag("Player"))
+        {
+            Vector2 velocity;
+            velocity.x = body2D.velocity.x;
+            velocity.y = (body2D.velocity.y / 2.0f) + (coll.collider.attachedRigidbody.velocity.y / 3.0f);
+            body2D.velocity = velocity;
+        }
     }
 }

@@ -333,7 +333,7 @@ PrefabInstance:
     - target: {fileID: 1154105730269553165, guid: 3474f4a7db7741b408d17fda7cbd8a20, type: 3}
       propertyPath: body2D
       value: 
-      objectReference: {fileID: 1066811422}
+      objectReference: {fileID: 0}
     - target: {fileID: 1154105730269553165, guid: 3474f4a7db7741b408d17fda7cbd8a20, type: 3}
       propertyPath: boundY
       value: 5
@@ -415,6 +415,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4608127780421076246, guid: a3f2c844eedda7f4696209f7c1b25a15, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4608127780421076246, guid: a3f2c844eedda7f4696209f7c1b25a15, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4608127780421076246, guid: a3f2c844eedda7f4696209f7c1b25a15, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 749307752663190588, guid: a3f2c844eedda7f4696209f7c1b25a15, type: 3}
       propertyPath: m_RootOrder
       value: 1
