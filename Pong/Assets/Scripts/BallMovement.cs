@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    public Rigidbody2D body2D;
+    private Rigidbody2D body2D;
 
     // Start is called before the first frame update
     void Start()

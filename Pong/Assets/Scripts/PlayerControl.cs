@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
     public float MoveSpeed = 10.0f;
     public Rigidbody2D body2D;
     public float boundY = 3.0f;
-
+    public string axis = "Vertical";
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +21,12 @@ public class PlayerControl : MonoBehaviour
         Vector2 velocity = body2D.velocity;
         velocity.y = 0;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetAxisRaw(axis) > 0.0f)
         {
             velocity.y = MoveSpeed;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetAxisRaw(axis) < 0.0f)
         {
 
             velocity.y = -MoveSpeed;
